@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.shadow-teacher {
+    box-shadow: 0.5px 0.5px 5px #ddd;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 35s linear infinite;
+
+}
+
+@media (max-width: 768px) {
+    .animate-marquee {
+        animation: marquee 70s linear infinite;
+
+    }
+}

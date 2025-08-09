@@ -6,6 +6,11 @@ import OurTeacher from "../../pages/AcademicDrawer/OurTeacher/OurTeacher";
 import AboutUs from "../../pages/AboutDrawer/AboutUs/AboutUs";
 import History from "../../pages/AboutDrawer/History/History";
 import Contact from "../../pages/Contact/Contact";
+import GoverningBody from "../../pages/AboutDrawer/GoverningBody/GoverningBody";
+import OurVision from "../../pages/AboutDrawer/OurVision/OurVision";
+import Notice from "../../pages/InformationDrawer/Notice/Notice";
+import Events from "../../pages/InformationDrawer/Events/Events";
+import Routine from "../../pages/AcademicDrawer/Routine/Routine";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +21,7 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home />
             },
+            //About Drawer
             {
                 path: '/about-us',
                 element: <AboutUs />
@@ -25,11 +31,33 @@ const router = createBrowserRouter([
                 element: <History />
             },
             {
-                path: '/teachers',
+                path: '/mission-vision',
+                element: <OurVision />
+            },
+            {
+                path: '/governing-body',
+                element: <GoverningBody />
+            },
+            //Information Drawer
+            {
+                path: '/information/notice',
+                element: <Notice />
+            },
+            {
+                path: '/information/events',
+                element: <Events />
+            },
+            //Academic Drawer
+            {
+                path: '/academic/teachers',
                 element: <OurTeacher />
             },
             {
-                path: '/teachers/:teacherId',
+                path: '/academic/routine',
+                element: <Routine />
+            },
+            {
+                path: '/academic/teacher/:teacherId',
                 element: <TeacherDetails />
             },
             {

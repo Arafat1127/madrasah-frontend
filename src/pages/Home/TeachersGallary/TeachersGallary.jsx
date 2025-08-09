@@ -12,7 +12,7 @@ const TeachersGallery = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-10">
-            <h2 className="text-3xl font-bold text-center ">Our Teachers</h2>
+            <h2 className="text-3xl font-bold text-center font-roboto">Our Teachers</h2>
             <div className='text-[#020085] w-[120px] mt-2 mb-6 mx-auto'>
                 <hr className="border-t-2 border-[#666] ml-[15px]" />
                 <hr className="border-t-2 border-[#666] mr-[15px] mt-1" />
@@ -21,10 +21,10 @@ const TeachersGallery = () => {
                 {teachersDatas.slice(0, 10).map((teacher) => (
                     <Link
                         key={teacher.id}
-                        to={`/teachers/${teacher.id}`}
+                        to={`/academic/teacher/${teacher.id}`}
                         className="group relative h-auto overflow-hidden rounded text-center"
                     >
-                        <div className="border border-[#dfdfdf] p-1.5 h-auto">
+                        <div className="border border-[#dfdfdf] p-1.5 h-[260px]">
                             <img
                                 src={teacher.imageUrl}
                                 alt={teacher.name}
@@ -51,7 +51,7 @@ const TeachersGallery = () => {
             {/* All Teachers Button */}
             <div className="text-center mt-12">
                 <Link
-                    to="/teachers"
+                    to="/academic/teachers"
                     className="relative w-auto h-[48px] bg-[#020085] inline-flex items-center px-12 py-3 overflow-hidden text-lg font-medium text-white border border-[#020085] hover:border-[#ff2439] hover:text-white group hover:bg-gray-50"
                 >
                     <span className="absolute left-0 block w-full h-0 transition-all bg-[#ff2439] opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>

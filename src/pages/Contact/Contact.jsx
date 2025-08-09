@@ -22,7 +22,7 @@ const Contact = () => {
                         </div>
                         <div>
                             <h3 className="font-semibold text-lg">Our Location</h3>
-                            <p className="text-gray-600">Shaistaganj, Habiganj</p>
+                            <p className="text-gray-600">Damurhuda , Chuadanga</p>
                         </div>
                     </div>
 

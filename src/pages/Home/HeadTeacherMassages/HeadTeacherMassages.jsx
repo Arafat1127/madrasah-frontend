@@ -39,7 +39,7 @@ const HeadTeacherMassages = () => {
                         </div>
                         <div className="font-bold font-roboto pl-4 sm:pl-5">
                             <h1 className="text-[20px] sm:text-[30px] uppercase font-roboto ">Md. Abu Talha</h1>
-                            <h2 className="text-[#6c757d] text-[16px] sm:text-[20px] mt-1 font-roboto">Asst. Superintendent</h2>
+                            <h2 className="text-[#6c757d] text-[16px] sm:text-[20px] mt-1 font-roboto">Asst. Superintendent (Acting)</h2>
                         </div>
                     </div>
                     <div className="w-full my-4">

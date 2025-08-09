@@ -8,10 +8,13 @@ import TeachersGallery from './TeachersGallary/TeachersGallary';
 import Statistics from './Statistics/Statistics';
 import ManagingCommittee from './ManagingCommittee/ManagingCommittee';
 import StudentStatistics from './StudentStatistics/StudentStatistics';
+import NoticeBar from '../Shared/Header/NoticeBar';
+import LoadingPage from '../Shared/LoadingPage/LoadingPage';
 
 const Home = () => {
     return (
         <div>
+            <NoticeBar />
             <Banner />
             <SecondBanner />
             <HeadTeacherMassages />
@@ -21,6 +24,7 @@ const Home = () => {
             <Statistics />
             <ManagingCommittee />
             <StudentStatistics />
+            <LoadingPage />
         </div>
     );
 };

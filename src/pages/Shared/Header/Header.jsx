@@ -11,6 +11,10 @@ const Header = () => {
     const toggleDropdown = (name) => {
         setOpenDropdown(openDropdown === name ? null : name);
     };
+    const handleLinkClick = () => {
+        setMobileMenuOpen(false);
+        setOpenDropdown(null);
+    };
 
     return (
         <div className="w-full">
@@ -36,7 +40,7 @@ const Header = () => {
             </div>
 
             {/* Logo area */}
-            <div className="bg-white py-2 px-1 lg:px-[180px] shadow flex items-center justify-between">
+            <div className="bg-white py-2 px-1 lg:px-[180px] shadow-2xl  flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link to='/'> <img src={logo} alt="Logo" className="cursor-pointer h-[65px] w-[65px] md:h-[80px] md:w-[80px] lg:h-[85px] lg:w-[85px]" /></Link>
                     <div>
@@ -69,10 +73,10 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="/about-us">About Us</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="/history">History</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Mission</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Vision</Link></li>
+                            <Link to="/about-us">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">About Us</li></Link>
+                            <Link to="/history">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">History</li></Link>
+                            <Link to="/mission-vision">      <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Our Vision</li></Link>
+                            <Link to="/governing-body">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Governing Body</li></Link>
                         </ul>
                     </li>
 
@@ -88,8 +92,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Notice</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Events</Link></li>
+                            <Link to="/information/notice">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Notice</li></Link>
+                            <Link to="/information/events">    <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Events</li></Link>
                         </ul>
                     </li>
 
@@ -105,10 +109,10 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="/teachers">Our Teachers</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Syllabus</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Routine</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Class Info</Link></li>
+                            <Link to="/academic/teachers">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Our Teachers</li></Link>
+                            <Link to="#"> <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Syllabus</li></Link>
+                            <Link to="/academic/routine">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Routine</li></Link>
+                            <Link to="#">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Class Info</li></Link>
                         </ul>
                     </li>
 
@@ -124,8 +128,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Rules</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Apply</Link></li>
+                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Rules</li></Link>
+                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Apply</li></Link>
                         </ul>
                     </li>
 
@@ -141,8 +145,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Student List</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Gallery</Link></li>
+                            <Link to="#">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Student List</li></Link>
+                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Gallery</li></Link>
                         </ul>
                     </li>
 
@@ -158,8 +162,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">JSC</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">SSC</Link></li>
+                            <Link to="#"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">JSC</li></Link>
+                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">SSC</li></Link>
                         </ul>
                     </li>
 
@@ -169,27 +173,28 @@ const Header = () => {
                             OTHERS <FaAngleDown />
                         </span>
                         <ul
-                            className={`absolute top-full left-0 bg-white text-black shadow-md
+                            className={`absolute top-full left-0 bg-white text-black shadow-all
                             opacity-0 pointer-events-none
                             group-hover:opacity-100 group-hover:pointer-events-auto
                             translate-y-2 group-hover:translate-y-0 transform
-                            transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
+                            transition-all duration-300 ease-in-out z-50 min-w-[150px] `}
                         >
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Library</Link></li>
-                            <li className="px-4 py-2 hover:bg-[#020085] hover:text-white"><Link to="#">Clubs</Link></li>
+                            <Link to="#"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Library</li></Link>
+                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Clubs</li></Link>
                         </ul>
                     </li>
 
-                    <li><Link to="/contact" className="">CONTACT</Link></li>
+                    <Link to="/contact" > <li>CONTACT</li></Link>
                 </ul>
 
                 {/* Mobile Menu */}
                 {mobileMenuOpen && (
-                    <ul className="lg:hidden px-4 py-4 space-y-2 bg-blue-900 text-white">
+                    <ul className="lg:hidden px-4 py-4 space-y-2 bg-blue-900 text-white transition-all duration-500 ease-in-out">
                         <li>
-                            <Link to="/" className="block py-2">HOME</Link>
+                            <Link to="/" className="block py-2" onClick={handleLinkClick}>HOME</Link>
                         </li>
 
+                        {/* ABOUT */}
                         <li>
                             <button
                                 className="w-full text-left py-2 flex justify-between items-center"
@@ -198,132 +203,97 @@ const Header = () => {
                                 ABOUT
                                 <span>{openDropdown === 'about' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'about' ? 'max-h-40' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Mission</Link></li>
-                                <li><Link to="#" className="block py-1">Vision</Link></li>
-                                <li><Link to="#" className="block py-1">History</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'about' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="/about-us" className="block py-1" onClick={handleLinkClick}> <li>About Us</li></Link>
+                                <Link to="/history" className="block py-1" onClick={handleLinkClick}> <li>History</li></Link>
+                                <Link to="/mission-vision" className="block py-1" onClick={handleLinkClick}>  <li>Our Vision</li></Link>
+                                <Link to="/governing-body" className="block py-1" onClick={handleLinkClick}> <li>Governing Body</li></Link>
                             </ul>
                         </li>
 
+                        {/* INFORMATION */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('information')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('information')}>
                                 INFORMATION
                                 <span>{openDropdown === 'information' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'information' ? 'max-h-40' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Notice</Link></li>
-                                <li><Link to="#" className="block py-1">Events</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'information' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Notice</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Events</li></Link>
                             </ul>
                         </li>
 
+                        {/* ACADEMIC */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('academic')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('academic')}>
                                 ACADEMIC
                                 <span>{openDropdown === 'academic' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'academic' ? 'max-h-48' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Syllabus</Link></li>
-                                <li><Link to="#" className="block py-1">Routine</Link></li>
-                                <li><Link to="#" className="block py-1">Class Info</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'academic' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="/teachers" className="block py-1" onClick={handleLinkClick}> <li>Our Teachers</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>Syllabus</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Routine</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Class Info</li></Link>
                             </ul>
                         </li>
 
+                        {/* ADMISSION */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('admission')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('admission')}>
                                 ADMISSION
                                 <span>{openDropdown === 'admission' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'admission' ? 'max-h-32' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Rules</Link></li>
-                                <li><Link to="#" className="block py-1">Apply</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'admission' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Rules</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}><li>Apply</li></Link>
                             </ul>
                         </li>
 
+                        {/* STUDENT */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('student')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('student')}>
                                 STUDENT
                                 <span>{openDropdown === 'student' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'student' ? 'max-h-32' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Student List</Link></li>
-                                <li><Link to="#" className="block py-1">Gallery</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'student' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>Student List</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}>   <li>Gallery</li></Link>
                             </ul>
                         </li>
 
+                        {/* RESULT */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('result')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('result')}>
                                 RESULT
                                 <span>{openDropdown === 'result' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'result' ? 'max-h-28' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">JSC</Link></li>
-                                <li><Link to="#" className="block py-1">SSC</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'result' ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>JSC</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>SSC</li></Link>
                             </ul>
                         </li>
 
+                        {/* OTHERS */}
                         <li>
-                            <button
-                                className="w-full text-left py-2 flex justify-between items-center"
-                                onClick={() => toggleDropdown('others')}
-                            >
+                            <button className="w-full text-left py-2 flex justify-between items-center" onClick={() => toggleDropdown('others')}>
                                 OTHERS
                                 <span>{openDropdown === 'others' ? '▲' : '▼'}</span>
                             </button>
-                            <ul
-                                className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-[max-height] duration-300 ease-in-out ${openDropdown === 'others' ? 'max-h-28' : 'max-h-0'
-                                    }`}
-                            >
-                                <li><Link to="#" className="block py-1">Library</Link></li>
-                                <li><Link to="#" className="block py-1">Clubs</Link></li>
+                            <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'others' ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Library</li></Link>
+                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Clubs</li></Link>
                             </ul>
                         </li>
 
-                        <li>
-                            <Link to="/facilities" className="block py-2">FACILITIES</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/contact" className="block py-2">CONTACT</Link>
-                        </li>
+                        {/* Other */}
+                        <Link to="/facilities" className="block py-2" onClick={handleLinkClick}>  <li>FACILITIES</li></Link>
+                        <Link to="/contact" className="block py-2" onClick={handleLinkClick}> <li>CONTACT</li></Link>
                     </ul>
                 )}
+
+
+
             </nav>
-            <div className=''>
-                <NoticeBar />
-            </div>
         </div>
     );
 };

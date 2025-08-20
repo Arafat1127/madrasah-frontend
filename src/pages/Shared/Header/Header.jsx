@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaYoutube, FaBars, FaTimes, FaAngleDown } from 'react-icons/fa';
+import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaYoutube, FaBars, FaTimes, FaAngleDown, FaEnvelope } from 'react-icons/fa';
 import logo from '../../../assets/images/logo.png';
 import NoticeBar from './NoticeBar';
 
@@ -22,7 +22,7 @@ const Header = () => {
             <div className="bg-black text-white text-sm px-4 lg:px-[180px] py-2">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-2">
                     <div className="text-[12px] flex justify-between items-center gap-2">
-                        <span className="flex items-center gap-1">📧 <span>shschool191@gmail.com</span></span>
+                        <span className="flex items-center gap-1"><FaEnvelope /> <span>shschool191@gmail.com</span></span>
                         <span className="flex items-center gap-1">📞 <span>01715442678</span></span>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
 
             {/* Logo area */}
-            <div className="bg-white py-2 px-1 lg:px-[180px] shadow-2xl  flex items-center justify-between">
+            <div className="bg-white py-2 px-5 lg:px-[100px] xl:px-[180px]shadow-2xl  flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link to='/'> <img src={logo} alt="Logo" className="cursor-pointer h-[65px] w-[65px] md:h-[80px] md:w-[80px] lg:h-[85px] lg:w-[85px]" /></Link>
                     <div>
@@ -58,7 +58,7 @@ const Header = () => {
             {/* Navigation */}
             <nav className="bg-[#020085] text-white relative">
                 {/* Desktop Menu */}
-                <ul className="hidden lg:flex px-6 lg:px-[180px] py-3 gap-6 font-semibold text-sm">
+                <ul className="hidden lg:flex px-6 lg:px-[100px] xl:px-[180px] py-3 gap-6 font-semibold text-sm">
                     <li className=''><Link to="/" className=" ">HOME</Link></li>
 
                     {/* ABOUT */}
@@ -94,6 +94,7 @@ const Header = () => {
                         >
                             <Link to="/information/notice">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Notice</li></Link>
                             <Link to="/information/events">    <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Events</li></Link>
+                            <Link to="/information/holidays-2025">    <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Holidays 2025</li></Link>
                         </ul>
                     </li>
 
@@ -145,8 +146,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <Link to="#">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Student List</li></Link>
-                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Gallery</li></Link>
+                            <Link to="/student/student-list">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Student List</li></Link>
+                            <Link to="/student/photo-gallery">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Gallery</li></Link>
                         </ul>
                     </li>
 
@@ -162,8 +163,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <Link to="#"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">JSC</li></Link>
-                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">SSC</li></Link>
+                            <Link to="/jsc"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Academic</li></Link>
+                            <Link to="http://www.educationboardresults.gov.bd" target='_blank' rel='noopener noreferrer'>  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">SSC</li></Link>
                         </ul>
                     </li>
 
@@ -218,8 +219,8 @@ const Header = () => {
                                 <span>{openDropdown === 'information' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'information' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Notice</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Events</li></Link>
+                                <Link to="/information/notice" className="block py-1" onClick={handleLinkClick}> <li>Notice</li></Link>
+                                <Link to="/information/events" className="block py-1" onClick={handleLinkClick}> <li>Events</li></Link>
                             </ul>
                         </li>
 
@@ -230,9 +231,9 @@ const Header = () => {
                                 <span>{openDropdown === 'academic' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'academic' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="/teachers" className="block py-1" onClick={handleLinkClick}> <li>Our Teachers</li></Link>
+                                <Link to="/academic/teachers" className="block py-1" onClick={handleLinkClick}> <li>Our Teachers</li></Link>
                                 <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>Syllabus</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Routine</li></Link>
+                                <Link to="/academic/routine" className="block py-1" onClick={handleLinkClick}> <li>Routine</li></Link>
                                 <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Class Info</li></Link>
                             </ul>
                         </li>
@@ -256,8 +257,8 @@ const Header = () => {
                                 <span>{openDropdown === 'student' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'student' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>Student List</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}>   <li>Gallery</li></Link>
+                                <Link to="/student/student-list" className="block py-1" onClick={handleLinkClick}>  <li>Student List</li></Link>
+                                <Link to="/student/photo-gallery" className="block py-1" onClick={handleLinkClick}>   <li>Gallery</li></Link>
                             </ul>
                         </li>
 
@@ -268,8 +269,8 @@ const Header = () => {
                                 <span>{openDropdown === 'result' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'result' ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>JSC</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>SSC</li></Link>
+                                <Link to="/jsc" className="block py-1" onClick={handleLinkClick}>  <li>Academic</li></Link>
+                                <Link to="http://www.educationboardresults.gov.bd" className="block py-1" onClick={handleLinkClick}> <li>SSC</li></Link>
                             </ul>
                         </li>
 
@@ -290,9 +291,6 @@ const Header = () => {
                         <Link to="/contact" className="block py-2" onClick={handleLinkClick}> <li>CONTACT</li></Link>
                     </ul>
                 )}
-
-
-
             </nav>
         </div>
     );

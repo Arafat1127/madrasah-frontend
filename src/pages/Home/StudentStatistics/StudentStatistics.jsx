@@ -30,13 +30,13 @@ const StudentStatistics = () => {
                     </div>
                     <p className="text-lg sm:text-[22px] mb-10 font-bold font-roboto">Class wise Students</p>
                     <div className='flex justify-center'>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 md:gap-10 lg:gap-16">
+                        <div className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-6 gap-4 sm:gap-6 md:gap-6 lg:gap-8 xl:gap-16">
                             {stats.map((stat, idx) => {
                                 const count = useCountUp(stat.value, 1500, inView);
                                 return (
                                     <div
                                         key={idx}
-                                        className="bg-[#ff2439] rounded-full w-[130px] h-[130px] sm:w-[150px] sm:h-[150px] lg:w-[170px] lg:h-[170px] flex flex-col items-center justify-center transition duration-200 hover:-translate-y-[7px]"
+                                        className="bg-[#ff2439] rounded-full w-[130px] h-[130px] md:w-[145px] md:h-[145px] lg:w-[150px] lg:h-[150px] xl:w-[170px] xl:h-[170px] flex flex-col items-center justify-center transition duration-200 hover:-translate-y-[7px]"
                                     >
                                         <h3 className="text-2xl sm:text-[28px] lg:text-[35px] font-bold font-roboto">{count}</h3>
                                         <p className="text-sm sm:text-[15px] font-bold font-roboto uppercase">{stat.label}</p>

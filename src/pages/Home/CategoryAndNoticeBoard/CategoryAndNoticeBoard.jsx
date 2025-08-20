@@ -1,6 +1,7 @@
 // Dashboard.jsx
 import React from 'react';
 import { FaUsers, FaChalkboardTeacher, FaCheckCircle, FaBolt, FaBell, FaNewspaper, FaRegRegistered, FaImages, FaAngleDown, FaAngleUp, FaBook } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const CategoryAndNoticeBoard = () => {
 
@@ -19,15 +20,15 @@ const CategoryAndNoticeBoard = () => {
     return (
         <div className="bg-white  md:flex  justify-center gap-6 p-4 md:p-10 items-start">
             {/* Left Section */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-[900px] font-roboto">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-[900px] font-roboto cursor-pointer">
                 <Box icon={<FaUsers />} text="Student List" />
-                <Box icon={<FaChalkboardTeacher />} text="Our Teachers" />
+                <Link to='/academic/teachers'> <Box icon={<FaChalkboardTeacher />} text="Our Teachers" /></Link>
                 <Box icon={<FaCheckCircle />} text="Attendance Sheet" />
                 <Box icon={<FaBolt />} text="Result" />
                 <Box icon={<FaBell />} text="Exam Schedule" />
                 <Box icon={<FaNewspaper />} text="News" />
                 <Box icon={<FaRegRegistered />} text="Routine" />
-                <Box icon={<FaBook />} text="Download Books" />
+                <Link to='https://nctb.gov.bd'><Box icon={<FaBook />} text="Download Books" /></Link>
                 <Box icon={<FaImages />} text="Gallery" />
             </div>
 

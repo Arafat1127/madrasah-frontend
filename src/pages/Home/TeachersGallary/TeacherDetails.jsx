@@ -36,7 +36,6 @@ const TeacherDetails = () => {
     }
     return (
         <div className="container mx-auto px-4 py-8">
-
             <span className="flex items-center text-[15px] font-roboto gap-2 ">
                 <Link to="/academic/teachers">
                     <span className='flex items-center gap-2 text-[#020085] hover:text-red-500'>
@@ -51,14 +50,14 @@ const TeacherDetails = () => {
                     <img
                         src={teacher.imageUrl}
                         alt={teacher.name}
-                        className="bg-[#58a0e8]  w-[140px] md:w-[160px] lg:w-[180px]  h-auto object-cover rounded-2xl mx-auto md:mx-0"
+                        className="bg-[#58a0e8]  w-[190px] md:w-[160px] lg:w-[180px]  h-auto object-cover rounded border mx-auto md:mx-0"
                     />
                     <h2 className="text-center text-[20px] font-bold text-[#252525] mt-6 font-roboto">{teacher.name}</h2>
                     <h5 className="text-center text-[#525252] text-[14px] font-semibold mt-1 font-roboto">{teacher.designation}</h5>
                 </div>
 
                 {/* Right Section: Detailed Information */}
-                <div className="w-full lg:w-2/3">
+                <div className="w-full lg:w-2/4">
                     <h3 className="text-2xl font-bold text-[#252525] mb-6 border-b pb-2 font-roboto">Personal Information</h3>
                     <div className="space-y-3 text-red-500 ">
                         <DetailRow label="MPO Index No." value={teacher.mpoIndexNo} />

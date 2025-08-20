@@ -24,11 +24,11 @@ const TeachersGallery = () => {
                         to={`/academic/teacher/${teacher.id}`}
                         className="group relative h-auto overflow-hidden rounded text-center"
                     >
-                        <div className="border border-[#dfdfdf] p-1.5 h-[260px]">
+                        <div className="border border-[#dfdfdf] p-1.5 w-[150px] md:w-[190px] lg:w-[220px] h-[270px] md:h-auto">
                             <img
                                 src={teacher.imageUrl}
                                 alt={teacher.name}
-                                className="bg-[#58a0e8] border-[1px] w-[130px] md:w-[190px] lg:w-[220px] h-auto object-cover"
+                                className="bg-[#58a0e8] border-[1px] w-[150px] md:w-[190px] lg:w-[220px] h-auto object-cover"
                             />
                             {/* Mobile: Static Text Below Image */}
                             <div className="md:hidden mt-2 font-roboto">

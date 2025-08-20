@@ -1,4 +1,3 @@
-// src/components/ManagingCommittee.jsx
 import React from 'react';
 
 const members = [
@@ -6,19 +5,19 @@ const members = [
         name: "JAINAL ABADIN",
         role: "Chairman",
         contact: "+8801701067677",
-        image: '',
+        image: 'https://i.ibb.co.com/Z6Grv1tX/teacher-male-1-removebg-preview.png',
     },
     {
-        name: "Md. Abu Talha",
+        name: "ASHADUL HAQUE",
         role: "Member",
         contact: "+8801720113995",
-        image: "https://i.ibb.co/cc25qxkc/Talha-Sir.png"
+        image: "https://i.ibb.co/QFbkVkCs/Ashadul-Sir.png"
     },
     {
-        name: "MD.Abdullah All Mamun",
+        name: "MD MOHASIN ALI",
         role: "Member",
         contact: "+8801712177649",
-        image: "https://i.ibb.co/fYGckJ0X/Abdullah-Sir.png"
+        image: "https://i.ibb.co/hJMkVTp4/Mohasin-Sir.png"
     },
     {
         name: "MST.SHAHINA KHATUN",
@@ -77,9 +76,9 @@ const ManagingCommittee = () => {
 
             {/* Members Grid */}
             <div className='flex justify-center'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
                     {members.map((member, index) => (
-                        <div key={index} className="bg-white w-[240px]  md:w-[350px] shadow-md rounded-lg p-4  text-center">
+                        <div key={index} className="bg-white w-[280px]  lg:w-[220px] xl:w-[290px] shadow-md rounded-lg p-4  text-center">
                             <img src={member.image} alt={member.name} className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full bg-[#58a0e8] mx-auto border border-[#0B0B82] object-contain" />
                             <h3 className="text-lg font-bold text-[#0B0B82] mt-4 font-roboto">{member.name}</h3>
                             <p className="text-gray-600 text-sm font-bold font-roboto">{member.role}</p>

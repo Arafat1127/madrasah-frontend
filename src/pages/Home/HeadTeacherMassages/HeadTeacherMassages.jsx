@@ -5,9 +5,9 @@ import asstSuperImg from '../../../assets/images/Talha-Sir.png';
 const HeadTeacherMassages = () => {
     return (
         <div className="py-6 px-4">
-            <div className="flex flex-col lg:flex-row justify-center gap-2 md:gap-6">
+            <div className="md:flex  justify-center lg:flex-row  gap-2 md:gap-6 ">
                 {/* First Message */}
-                <div className="border border-[#dfdfdf] w-full max-w-[770px] p-4 sm:p-6 rounded-sm">
+                <div className="border border-[#dfdfdf] w-full max-w-[770px] p-4 sm:p-6 rounded-sm mb-5 md:mb-0">
                     <div className="flex items-center">
                         <div className="border border-[#dfdfdf] p-1.5">
                             <img className="w-[100px] sm:w-[150px] bg-[#58a0e8]" src={superImg} alt="Acting Superintendent" />

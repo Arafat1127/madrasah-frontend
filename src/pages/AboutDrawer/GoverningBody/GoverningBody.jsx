@@ -6,19 +6,19 @@ const GoverningBody = () => {
             name: "JAINAL ABADIN",
             role: "Chairman",
             contact: "+8801701067677",
-            image: '',
+            image: 'https://i.ibb.co.com/Z6Grv1tX/teacher-male-1-removebg-preview.png',
         },
         {
-            name: "Md. Abu Talha",
+            name: "ASHADUL HAQUE",
             role: "Member",
             contact: "+8801720113995",
-            image: "https://i.ibb.co/cc25qxkc/Talha-Sir.png"
+            image: "https://i.ibb.co/QFbkVkCs/Ashadul-Sir.png"
         },
         {
-            name: "MD.Abdullah All Mamun",
+            name: "MD MOHASIN ALI",
             role: "Member",
             contact: "+8801712177649",
-            image: "https://i.ibb.co/fYGckJ0X/Abdullah-Sir.png"
+            image: "https://i.ibb.co/hJMkVTp4/Mohasin-Sir.png"
         },
         {
             name: "MST.SHAHINA KHATUN",

@@ -21,15 +21,15 @@ const CategoryAndNoticeBoard = () => {
         <div className="bg-white  md:flex  justify-center gap-6 p-4 md:p-10 items-start">
             {/* Left Section */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-[900px] font-roboto cursor-pointer">
-                <Box icon={<FaUsers />} text="Student List" />
+                <Link to='/student/student-list'><Box icon={<FaUsers />} text="Student List" /></Link>
                 <Link to='/academic/teachers'> <Box icon={<FaChalkboardTeacher />} text="Our Teachers" /></Link>
-                <Box icon={<FaCheckCircle />} text="Attendance Sheet" />
-                <Box icon={<FaBolt />} text="Result" />
-                <Box icon={<FaBell />} text="Exam Schedule" />
-                <Box icon={<FaNewspaper />} text="News" />
-                <Box icon={<FaRegRegistered />} text="Routine" />
+                <Link to='/academic/attendance-sheet'> <Box icon={<FaCheckCircle />} text="Attendance Sheet" /></Link>
+                <Link to='/noInformationFound'><Box icon={<FaBolt />} text="Result" /></Link>
+                <Link to='/noInformationFound'><Box icon={<FaBell />} text="Exam Schedule" /></Link>
+                <Link to='/noInformationFound'><Box icon={<FaNewspaper />} text="News" /></Link>
+                <Link to='/academic/routine'><Box icon={<FaRegRegistered />} text="Routine" /></Link>
                 <Link to='https://nctb.gov.bd'><Box icon={<FaBook />} text="Download Books" /></Link>
-                <Box icon={<FaImages />} text="Gallery" />
+                <Link to='/student/photo-gallery'><Box icon={<FaImages />} text="Gallery" /></Link>
             </div>
 
             {/* Right Notice Board */}

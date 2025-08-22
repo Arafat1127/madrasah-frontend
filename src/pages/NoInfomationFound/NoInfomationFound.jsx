@@ -15,6 +15,12 @@ const NoInformationFound = () => {
                     <h2 className="text-xl font-medium text-[#666666] mb-4 font-roboto">
                         Sorry! No Information Found.
                     </h2>
+                    <h2 className="text-[16px] font-medium text-[#666666] mb-4 font-roboto">
+                        Update Coming Soon .
+                    </h2>
+                    <h2 className="text-[16px] font-medium text-[#666666] mb-4 font-roboto">
+                        Work in Progress .
+                    </h2>
                     <button
                         onClick={() => navigate('/')}
                         className="mt-2 px-5 py-2 border border-gray-400 rounded hover:bg-[#020085] transition hover:text-white cursor-pointer font-roboto"

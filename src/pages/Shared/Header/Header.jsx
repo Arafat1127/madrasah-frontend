@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaYoutube, FaBars, FaTimes, FaAngleDown, FaEnvelope } from 'react-icons/fa';
 import logo from '../../../assets/images/logo.png';
-import NoticeBar from './NoticeBar';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,8 +22,8 @@ const Header = () => {
             <div className="bg-black text-white text-sm px-4 lg:px-[180px] py-2">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-2">
                     <div className="text-[12px] flex justify-between items-center gap-2">
-                        <span className="flex items-center gap-1"><FaEnvelope /> <span>shschool191@gmail.com</span></span>
-                        <span className="flex items-center gap-1">📞 <span>01715442678</span></span>
+                        <span className="flex items-center gap-1"><FaEnvelope /> <span>damurhudads78@gmail.com</span></span>
+                        <span className="flex items-center gap-1">📞 <span>01309115420</span></span>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
                         <div className="cursor-pointer hidden md:flex gap-2 text-lg">
@@ -34,7 +34,7 @@ const Header = () => {
                             <FaYoutube />
                         </div>
                         <button className=" cursor-pointer bg-[#020085] px-3 py-1 rounded text-white text-sm">বাংলা</button>
-                        <button className="cursor-pointer bg-orange-500 text-white px-3 py-1 rounded text-sm">সাইটম্যাপ</button>
+                        <Link to='/contact'><button className="cursor-pointer bg-orange-500 text-white px-3 py-1 rounded text-sm flex items-center gap-1"><FaLocationDot />সাইটম্যাপ</button></Link>
                     </div>
                 </div>
             </div>
@@ -111,9 +111,10 @@ const Header = () => {
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
                             <Link to="/academic/teachers">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Our Teachers</li></Link>
-                            <Link to="#"> <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Syllabus</li></Link>
+                            <Link to="/noInformationFound"> <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Syllabus</li></Link>
                             <Link to="/academic/routine">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Routine</li></Link>
-                            <Link to="#">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Class Info</li></Link>
+                            <Link to="/noInformationFound">   <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Class Info</li></Link>
+                            <Link to="/academic/attendance-sheet"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">AttendanceSheet</li></Link>
                         </ul>
                     </li>
 
@@ -129,8 +130,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Rules</li></Link>
-                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Apply</li></Link>
+                            <Link to="/noInformationFound">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Rules</li></Link>
+                            <Link to="/noInformationFound">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Apply</li></Link>
                         </ul>
                     </li>
 
@@ -163,7 +164,7 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px]`}
                         >
-                            <Link to="/jsc"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Academic</li></Link>
+                            <Link to="/academic/result"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Academic</li></Link>
                             <Link to="http://www.educationboardresults.gov.bd" target='_blank' rel='noopener noreferrer'>  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">SSC</li></Link>
                         </ul>
                     </li>
@@ -180,8 +181,8 @@ const Header = () => {
                             translate-y-2 group-hover:translate-y-0 transform
                             transition-all duration-300 ease-in-out z-50 min-w-[150px] `}
                         >
-                            <Link to="#"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Library</li></Link>
-                            <Link to="#">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Clubs</li></Link>
+                            <Link to="/noInformationFound"><li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Library</li></Link>
+                            <Link to="/noInformationFound">  <li className="px-4 py-2 hover:bg-[#020085] hover:text-white">Clubs</li></Link>
                         </ul>
                     </li>
 
@@ -221,6 +222,8 @@ const Header = () => {
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'information' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
                                 <Link to="/information/notice" className="block py-1" onClick={handleLinkClick}> <li>Notice</li></Link>
                                 <Link to="/information/events" className="block py-1" onClick={handleLinkClick}> <li>Events</li></Link>
+                                <Link to="/information/holidays-2025" className="block py-1" onClick={handleLinkClick}> <li>Holidays 2025</li></Link>
+
                             </ul>
                         </li>
 
@@ -232,9 +235,11 @@ const Header = () => {
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'academic' ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
                                 <Link to="/academic/teachers" className="block py-1" onClick={handleLinkClick}> <li>Our Teachers</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}>  <li>Syllabus</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}>  <li>Syllabus</li></Link>
                                 <Link to="/academic/routine" className="block py-1" onClick={handleLinkClick}> <li>Routine</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Class Info</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}> <li>Class Info</li></Link>
+                                <Link to="/academic/attendance-sheet" className="block py-1" onClick={handleLinkClick}> <li>Attendance Sheet</li></Link>
+
                             </ul>
                         </li>
 
@@ -245,8 +250,8 @@ const Header = () => {
                                 <span>{openDropdown === 'admission' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'admission' ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Rules</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}><li>Apply</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}> <li>Rules</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}><li>Apply</li></Link>
                             </ul>
                         </li>
 
@@ -269,7 +274,7 @@ const Header = () => {
                                 <span>{openDropdown === 'result' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'result' ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="/jsc" className="block py-1" onClick={handleLinkClick}>  <li>Academic</li></Link>
+                                <Link to="/academic/result" className="block py-1" onClick={handleLinkClick}>  <li>Academic</li></Link>
                                 <Link to="http://www.educationboardresults.gov.bd" className="block py-1" onClick={handleLinkClick}> <li>SSC</li></Link>
                             </ul>
                         </li>
@@ -281,8 +286,8 @@ const Header = () => {
                                 <span>{openDropdown === 'others' ? '▲' : '▼'}</span>
                             </button>
                             <ul className={`pl-4 mt-1 space-y-1 bg-blue-800 overflow-hidden transition-all duration-500 ease-in-out ${openDropdown === 'others' ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Library</li></Link>
-                                <Link to="#" className="block py-1" onClick={handleLinkClick}> <li>Clubs</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}> <li>Library</li></Link>
+                                <Link to="/noInformationFound" className="block py-1" onClick={handleLinkClick}> <li>Clubs</li></Link>
                             </ul>
                         </li>
 

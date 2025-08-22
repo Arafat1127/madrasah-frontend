@@ -15,6 +15,7 @@ import NoInformationFound from "../../pages/NoInfomationFound/NoInfomationFound"
 import StudentList from "../../pages/StudentDrawer/StudentList/StudentList";
 import Gallery from "../../pages/StudentDrawer/Gallery/Gallery";
 import Holiday from "../../pages/InformationDrawer/Holidays/Holidays";
+import AttendanceSheet from "../../pages/AcademicDrawer/AttendanceSheet/AttendanceSheet";
 
 const router = createBrowserRouter([
     {
@@ -65,16 +66,10 @@ const router = createBrowserRouter([
                 element: <Routine />
             },
             {
-                path: '/jsc',
-                element: <div> <div>
-                    <h2 className="text-3xl font-bold text-center  text-[#020085] pt-5 font-roboto">Events</h2>
-                    <div className='text-[#020085] w-[120px] mt-2  mx-auto pb-8'>
-                        <hr className="border-t-2 border-[#666] ml-[15px]" />
-                        <hr className="border-t-2 border-[#666] mr-[15px] mt-1" />
-                    </div>
-                    <NoInformationFound />
-                </div></div>
+                path: '/academic/attendance-sheet',
+                element: <AttendanceSheet />
             },
+
             //Student Drawer
             {
                 path: '/student/student-list',
@@ -88,10 +83,19 @@ const router = createBrowserRouter([
                 path: '/academic/teacher/:teacherId',
                 element: <TeacherDetails />
             },
+            //Result
+            {
+                path: '/academic/result',
+                element: <NoInformationFound />
+            },
             {
                 path: '/contact',
                 element: <Contact />
             },
+            {
+                path: '/noInformationFound',
+                element: <NoInformationFound />
+            }
         ]
     }
 ]);

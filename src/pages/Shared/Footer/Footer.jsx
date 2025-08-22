@@ -20,35 +20,35 @@ const Footer = () => {
                     ))}
                 </div>
             </div>
-            <div className="bg-gray-100 py-10"> {/* Added a subtle background and padding for the whole footer */}
+            <div className="bg-gray-100 py-10">
                 <footer>
-                    <div className='container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start pb-10 gap-8 px-4'>
+                    <div className='container mx-auto flex flex-col lg:flex-row justify-between items-center lg:items-start pb-10 gap-8 px-4 '>
                         {/* 1st part - Institution Info */}
-                        <div className="text-center lg:text-left mb-8 lg:mb-0">
+                        <div className="text-center lg:text-left mb-8 lg:mb-0 ">
                             <div className="flex justify-center lg:justify-start">
                                 <Link to='/'>
                                     <img className='cursor-pointer h-[65px] w-[65px] md:h-[80px] md:w-[80px] lg:h-[90px] lg:w-[90px]' src={logo} alt="Damurhuda D.S Dakhil Madrasah Logo" />
                                 </Link>
                             </div>
                             <h1 className="text-[15px] md:text-[19px] font-bold text-[#020085] pb-3 mt-4">Damurhuda D.S Dakhil Madrasah</h1>
-                            <div className="space-y-1"> {/* Added space-y for vertical spacing */}
-                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px]">
+                            <div className="space-y-1">
+                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px] text-gray-700">
                                     <span className='text-[#020085]'><FaPhoneAlt /></span>
-                                    <span>Contact : 01706336521</span>
+                                    <span>Contact: 01309115420</span>
                                 </span>
-                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px]">
+                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px] text-gray-700">
                                     <span className='text-[#020085]'><FaEnvelope /></span>
-                                    <span>Email: damurhuda132@Gmail.com</span>
+                                    <span>Email: damurhudads78@gmail.com</span>
                                 </span>
-                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px]">
+                                <span className="flex items-center justify-center lg:justify-start gap-3 font-roboto text-[15px] text-gray-700">
                                     <span className='text-[#020085]'><FaMapMarkerAlt /></span>
-                                    <span>Address: Damurhuda, Chuadanga.</span>
+                                    <span>Address: Damurhuda, Chuadanga 7220</span>
                                 </span>
                             </div>
                         </div>
 
                         {/* 2nd part - Quick Links */}
-                        <div className="text-center lg:text-left">
+                        <div className="text-center lg:text-left md:pt-10">
                             <h1 className='text-[#363636] font-bold text-[19px] mb-2'>Quick Links</h1>
                             <div className='flex justify-center lg:justify-start mb-6'>
                                 <div className='text-[#020085] w-[90px] font-bold'>
@@ -56,7 +56,7 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-3 '>
                                 {/* Column 1 - Longer Names */}
                                 <div>
                                     <Link to='https://moedu.portal.gov.bd' target="_blank" rel="noopener noreferrer">

@@ -40,7 +40,7 @@ const Header = () => {
             </div>
 
             {/* Logo area */}
-            <div className="bg-white py-2 px-5 lg:px-[100px] xl:px-[180px]shadow-2xl  flex items-center justify-between">
+            <div className="bg-white py-2 px-5 lg:px-[100px] xl:px-[180px] shadow-2xl  flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <Link to='/'> <img src={logo} alt="Logo" className="cursor-pointer h-[65px] w-[65px] md:h-[80px] md:w-[80px] lg:h-[85px] lg:w-[85px]" /></Link>
                     <div>

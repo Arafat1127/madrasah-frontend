@@ -10,31 +10,30 @@ const galleryItems = [
         img: "https://i.ibb.co.com/jZWhvVvb/482064115-628532079889797-2612274157330648324-n.jpg",
     },
     {
-        title: "Sheikh Rassel Corner",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "বই বিতরণ 2024",
+        img: "https://i.ibb.co.com/mFcB4Jns/Book-2024-m.jpg",
     },
     {
-        title: "15 August-2022",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "২০২৩ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
+        img: "https://i.ibb.co.com/vtQfcqL/Dakhil-2023-1.jpg",
     },
     {
-        title: "17 March 2022",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "২০২৩ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
+        img: "https://i.ibb.co.com/4ZP1KH9R/Dakhil-2023.jpg",
     },
     {
-        title: "100 Years celebration 2018",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "21 February",
+        img: "https://i.ibb.co.com/twTKJQwv/21-fb.jpg",
     },
     {
-        title: "26 March",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "15 August",
+        img: "https://i.ibb.co.com/fzYrqFhM/482093916-2234688453592540-3099419844401117886-n.jpg",
     },
     {
-        title: "Pictures of Shaistaganj High School students voting",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
+        title: "২০১৭ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
+        img: "https://i.ibb.co.com/mFtzXhSn/Dakhil-2017.jpg",
     },
 ];
-
 const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 

@@ -1,41 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-const galleryItems = [
-    {
-        title: "Study Tour-2025",
-        img: "https://i.ibb.co.com/NgwtvjLV/486406793-639250775484594-5355642737699856453-n.jpg",
-    },
-    {
-        title: "বই বিতরণ 2025",
-        img: "https://i.ibb.co.com/jZWhvVvb/482064115-628532079889797-2612274157330648324-n.jpg",
-    },
-    {
-        title: "বই বিতরণ 2024",
-        img: "https://i.ibb.co.com/mFcB4Jns/Book-2024-m.jpg",
-    },
-    {
-        title: "২০২৩ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
-        img: "https://i.ibb.co.com/vtQfcqL/Dakhil-2023-1.jpg",
-    },
-    {
-        title: "২০২৩ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
-        img: "https://i.ibb.co.com/4ZP1KH9R/Dakhil-2023.jpg",
-    },
-    {
-        title: "21 February",
-        img: "https://i.ibb.co.com/twTKJQwv/21-fb.jpg",
-    },
-    {
-        title: "15 August",
-        img: "https://i.ibb.co.com/fzYrqFhM/482093916-2234688453592540-3099419844401117886-n.jpg",
-    },
-    {
-        title: "২০১৭ দাখিল পরীক্ষার্থীদের বিদায় অনুষ্ঠান",
-        img: "https://i.ibb.co.com/mFtzXhSn/Dakhil-2017.jpg",
-    },
-];
+// Loading Component
+const LoadingSpinner = () => (
+    <div className="flex items-center justify-center h-screen">
+        <div className="w-12 h-12 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
+    </div>
+);
+
 const Gallery = () => {
+    const [galleryItems, setGalleryItems] = useState([]);
     const [selectedImage, setSelectedImage] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    // JSON fetch
+    useEffect(() => {
+        fetch("/gallery.json")
+            .then((res) => res.json())
+            .then((data) => {
+                setGalleryItems(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error("Error loading gallery.json:", err);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <LoadingSpinner />;
+    }
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-10">
@@ -46,17 +41,21 @@ const Gallery = () => {
                     <hr className="border-t-2 border-[#666] mr-[15px] mt-1" />
                 </div>
             </h2>
-            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+            {/* Gallery Grid */}
+            <div className="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {galleryItems.map((item, index) => (
                     <div
                         key={index}
                         className="bg-white rounded-lg shadow-md hover:shadow-lg transition p-2 cursor-pointer"
                         onClick={() => setSelectedImage(item)}
                     >
-                        <img
+                        {/* Lazy Loaded Image with blur */}
+                        <LazyLoadImage
                             src={item.img}
                             alt={item.title}
-                            className="w-full h-48 object-cover rounded"
+                            effect="blur"
+                            className="w-full md:w-[300px] h-48 object-cover rounded"
                         />
                         <p className="text-center text-sm mt-2 font-medium">
                             {item.title}
@@ -70,14 +69,16 @@ const Gallery = () => {
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
                     <div className="relative bg-white rounded-lg p-4 max-w-3xl w-full">
                         <button
-                            className="absolute top-2 right-2 text-gray-600 border rounded-full h-8 w-8 hover:bg-red-500 hover:text-white cursor-pointer text-xl"
                             onClick={() => setSelectedImage(null)}
+                            className="absolute top-2 right-2 text-gray-600 border rounded-full h-8 w-8 hover:bg-red-500 hover:text-white cursor-pointer text-xl"
+
                         >
                             ✕
                         </button>
-                        <img
+                        <LazyLoadImage
                             src={selectedImage.img}
                             alt={selectedImage.title}
+                            effect="blur"
                             className="w-full h-[70vh] object-contain rounded-lg"
                         />
                         <p className="text-center mt-4 font-semibold text-lg">

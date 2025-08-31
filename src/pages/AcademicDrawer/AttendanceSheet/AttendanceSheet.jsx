@@ -47,7 +47,7 @@ const AttendanceSheet = () => {
                             name="class"
                             value={formData.class}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                             required
                         >
                             <option value="">Select One</option>
@@ -68,7 +68,7 @@ const AttendanceSheet = () => {
                             name="section"
                             value={formData.section}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="A">A</option>
@@ -83,7 +83,7 @@ const AttendanceSheet = () => {
                             name="shift"
                             value={formData.shift}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="Morning">Morning</option>
@@ -98,7 +98,7 @@ const AttendanceSheet = () => {
                             name="group"
                             value={formData.group}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="Science">Science</option>
@@ -114,7 +114,7 @@ const AttendanceSheet = () => {
                             name="month"
                             value={formData.month}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                             required
                         >
                             <option value="">Select One</option>
@@ -140,7 +140,7 @@ const AttendanceSheet = () => {
                             name="year"
                             value={formData.year}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                             required
                         >
                             <option value="">Select One</option>
@@ -157,7 +157,7 @@ const AttendanceSheet = () => {
                             name="roll"
                             value={formData.roll}
                             onChange={handleChange}
-                            className="mt-1 block w-full border border-gray-300 rounded-md p-2"
+                            className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-[#18181b]"
                             placeholder="Enter Roll"
                         />
                     </div>

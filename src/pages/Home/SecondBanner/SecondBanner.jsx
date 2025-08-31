@@ -3,7 +3,7 @@ import React from 'react';
 const SecondBanner = () => {
     return (
         <div>
-            <div className=''>
+            <div className='bg-white'>
                 <div className='hidden lg:flex'>
                     <div className=' grid grid-cols-2 lg:grid-cols-4 w-full min-h-[100px] text-white font-roboto font-bold text-[18px] md:text-[20px]'>
 

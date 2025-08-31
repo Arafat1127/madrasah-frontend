@@ -4,7 +4,7 @@ import asstSuperImg from '../../../assets/images/Talha-Sir.png';
 
 const HeadTeacherMassages = () => {
     return (
-        <div className="py-6 px-4">
+        <div className="py-6 px-4 bg-white">
             <div className="md:flex  justify-center lg:flex-row  gap-2 md:gap-6 ">
                 {/* First Message */}
                 <div className="border border-[#dfdfdf] w-full max-w-[770px] p-4 sm:p-6 rounded-sm mb-5 md:mb-0">
@@ -13,7 +13,7 @@ const HeadTeacherMassages = () => {
                             <img className="w-[100px] sm:w-[150px] bg-[#58a0e8]" src={superImg} alt="Acting Superintendent" />
                         </div>
                         <div className="font-bold font-roboto pl-4 sm:pl-5">
-                            <h1 className="text-[20px] sm:text-[30px] uppercase font-roboto">Md. Ashadul Haque</h1>
+                            <h1 className="text-[20px] sm:text-[30px] uppercase font-roboto text-[#252525]">Md. Ashadul Haque</h1>
                             <h2 className="text-[#6c757d] text-[16px] sm:text-[20px] mt-1 font-roboto"> Superintendent (Acting)</h2>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ const HeadTeacherMassages = () => {
                             <img className="w-[100px] sm:w-[150px] bg-[#58a0e8]" src={asstSuperImg} alt="Assistant Superintendent" />
                         </div>
                         <div className="font-bold font-roboto pl-4 sm:pl-5">
-                            <h1 className="text-[20px] sm:text-[30px] uppercase font-roboto ">Md. Abu Talha</h1>
+                            <h1 className="text-[20px] sm:text-[30px] uppercase font-roboto text-[#252525]">Md. Abu Talha</h1>
                             <h2 className="text-[#6c757d] text-[16px] sm:text-[20px] mt-1 font-roboto">Asst. Superintendent (Acting)</h2>
                         </div>
                     </div>

@@ -57,7 +57,7 @@ const StudentList = () => {
                             name="class"
                             value={formData.class}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                             required
                         >
                             <option value="">Select One</option>
@@ -76,7 +76,7 @@ const StudentList = () => {
                             name="section"
                             value={formData.section}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="A">A</option>
@@ -91,7 +91,7 @@ const StudentList = () => {
                             name="shift"
                             value={formData.shift}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="Morning">Morning</option>
@@ -106,7 +106,7 @@ const StudentList = () => {
                             name="group"
                             value={formData.group}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                         >
                             <option value="">Select One</option>
                             <option value="Science">Science</option>
@@ -124,7 +124,7 @@ const StudentList = () => {
                             name="year"
                             value={formData.year}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                             required
                         >
                             <option value="">Select One</option>
@@ -143,7 +143,7 @@ const StudentList = () => {
                             value={formData.roll}
                             onChange={handleChange}
                             placeholder="Enter Roll no. here"
-                            className="w-full border border-gray-300 rounded-md p-2 font-roboto"
+                            className="w-full border border-gray-300 rounded-md p-2 font-roboto text-[#18181b]"
                         />
                     </div>
                 </div>
@@ -153,7 +153,7 @@ const StudentList = () => {
                     <button
                         type="button"
                         onClick={handleReset}
-                        className="bg-white border border-gray-400 px-6 py-2 rounded-md flex items-center justify-center gap-2 hover:bg-gray-200 cursor-pointer"
+                        className="bg-white border border-gray-400 px-6 py-2 rounded-md flex items-center justify-center gap-2 hover:bg-gray-200 cursor-pointer text-[#18181b]"
                     >
                         🔄 Reset
                     </button>

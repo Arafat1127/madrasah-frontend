@@ -133,7 +133,7 @@ const Footer = () => {
                                             <span>Rajshahi University</span>
                                         </span>
                                     </Link>
-                                    <Link to='https://www.du.ac.bd' target="_blank" rel="noopener noreferrer">
+                                    <Link to='https://www.iu.ac.bd' target="_blank" rel="noopener noreferrer">
                                         <span className='flex pt-2 gap-2 items-center font-roboto text-[15px] text-gray-700 hover:text-[#020085] transition-colors duration-200' >
                                             <span className='text-[#020085]'><FaRegClone /></span>
                                             <span>Islamic University Bangladesh</span>

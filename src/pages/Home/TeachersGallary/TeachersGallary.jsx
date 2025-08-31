@@ -11,7 +11,7 @@ const TeachersGallery = () => {
     }, []);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto px-4 py-10 ">
             <h2 className="text-3xl font-bold text-center font-roboto">Our Teachers</h2>
             <div className='text-[#020085] w-[120px] mt-2 mb-6 mx-auto'>
                 <hr className="border-t-2 border-[#666] ml-[15px]" />

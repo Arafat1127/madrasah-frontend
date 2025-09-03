@@ -12,7 +12,7 @@ const TeachersGallery = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-10 ">
-            <h2 className="text-3xl font-bold text-center font-roboto">Our Teachers</h2>
+            <h2 className="text-3xl font-bold text-center font-roboto text-[#1b1718]">Our Teachers</h2>
             <div className='text-[#020085] w-[120px] mt-2 mb-6 mx-auto'>
                 <hr className="border-t-2 border-[#666] ml-[15px]" />
                 <hr className="border-t-2 border-[#666] mr-[15px] mt-1" />
@@ -32,7 +32,7 @@ const TeachersGallery = () => {
                             />
                             {/* Mobile: Static Text Below Image */}
                             <div className="md:hidden mt-2 font-roboto">
-                                <h3 className="text-[16px] font-bold uppercase">{teacher.name}</h3>
+                                <h3 className="text-[16px] font-bold uppercase text-[#1b1718]">{teacher.name}</h3>
                                 <p className="text-sm text-gray-600">{teacher.designation}</p>
                             </div>
                         </div>

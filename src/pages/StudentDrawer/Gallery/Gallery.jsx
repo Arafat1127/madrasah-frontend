@@ -57,7 +57,7 @@ const Gallery = () => {
                             effect="blur"
                             className="w-full md:w-[300px] h-48 object-cover rounded"
                         />
-                        <p className="text-center text-sm mt-2 font-medium">
+                        <p className="text-center text-sm mt-2 font-medium text-[#1b1718]">
                             {item.title}
                         </p>
                     </div>

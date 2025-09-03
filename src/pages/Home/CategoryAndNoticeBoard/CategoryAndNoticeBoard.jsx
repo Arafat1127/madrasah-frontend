@@ -20,7 +20,7 @@ const CategoryAndNoticeBoard = () => {
     return (
         <div className="bg-white  md:flex  justify-center gap-6 p-4 md:p-10 items-start">
             {/* Left Section */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-[900px] font-roboto cursor-pointer">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 w-full md:w-[900px] font-roboto cursor-pointer">
                 <Link to='/student/student-list'><Box icon={<FaUsers />} text="Student List" /></Link>
                 <Link to='/academic/teachers'> <Box icon={<FaChalkboardTeacher />} text="Our Teachers" /></Link>
                 <Link to='/academic/attendance-sheet'> <Box icon={<FaCheckCircle />} text="Attendance Sheet" /></Link>

@@ -99,10 +99,10 @@ const Footer = () => {
                                             <span>Check Your Dakhil Result</span>
                                         </span>
                                     </Link>
-                                    <Link to='https://nctb.gov.bd' target="_blank" rel="noopener noreferrer">
+                                    <Link to='https://www.teachers.gov.bd' target="_blank" rel="noopener noreferrer">
                                         <span className='flex pt-2 gap-2 items-center font-roboto text-[15px] text-gray-700 hover:text-[#020085] transition-colors duration-200' >
                                             <span className='text-[#020085]'><FaRegClone /></span>
-                                            <span>National Curriculum and Textbook Board (NCTB)</span>
+                                            <span>Teachers Portal</span>
                                         </span>
                                     </Link>
                                     <Link to='https://bangladesh.gov.bd' target="_blank" rel="noopener noreferrer">

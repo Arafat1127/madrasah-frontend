@@ -9,6 +9,10 @@
     box-shadow: 0.5px 0.5px 5px #ddd;
 }
 
+.shadow-stu-card {
+    box-shadow: 3px 3px 3px 3px #ddd;
+}
+
 @keyframes marquee {
     0% {
         transform: translateX(100%);

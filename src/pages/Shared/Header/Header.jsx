@@ -35,6 +35,7 @@ const Header = () => {
                         </div>
                         <button className=" cursor-pointer bg-[#020085] px-3 py-1 rounded text-white text-sm">বাংলা</button>
                         <Link to='/contact'><button className="cursor-pointer bg-orange-500 text-white px-3 py-1 rounded text-sm flex items-center gap-1"><FaLocationDot />সাইটম্যাপ</button></Link>
+                        <Link to='/admin/dashboard'><button className=" cursor-pointer bg-[#020085] px-3 py-1 rounded text-white text-sm">Admin</button></Link>
                     </div>
                 </div>
             </div>

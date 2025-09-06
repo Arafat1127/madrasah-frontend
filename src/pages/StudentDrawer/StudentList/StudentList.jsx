@@ -213,13 +213,13 @@ const StudentList = () => {
                     <button
                         type="button"
                         onClick={handleReset}
-                        className="bg-white border border-gray-400 px-6 py-2 rounded-md hover:bg-gray-200"
+                        className="bg-white border border-gray-400 px-6 py-2 rounded-md hover:bg-gray-200 cursor-pointer"
                     >
                         🔄 Reset
                     </button>
                     <button
                         type="submit"
-                        className="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700"
+                        className="bg-indigo-600 text-white px-6 py-2 rounded-md hover:bg-indigo-700 cursor-pointer"
                     >
                         🔍 Search
                     </button>
